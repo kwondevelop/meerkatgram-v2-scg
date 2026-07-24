@@ -28,7 +28,7 @@ public class GlobalErrorWebExceptionHandler implements WebExceptionHandler {
 
     CustomResponseCode customResponseCode =
       (ex instanceof ResponseStatusException responseStatusException
-      && response.getStatusCode().value() == 404)
+      && responseStatusException.getStatusCode().value() == 404)
       ? CustomResponseCode.NOT_FOUND_ERROR : CustomResponseCode.SYSTEM_ERROR;
 
       response.setStatusCode(customResponseCode.getHttpStatus()); // Http Status 변경
