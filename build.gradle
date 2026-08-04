@@ -6,7 +6,7 @@ plugins {
 
 group = 'com'
 version = 'v1'
-description = 'msa4-meerkatgram-v2-scg'
+description = 'meerkatgram-v2-scg'
 
 java {
     toolchain {
