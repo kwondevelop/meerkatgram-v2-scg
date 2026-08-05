@@ -29,7 +29,7 @@ public class GlobalErrorWebExceptionHandler implements WebExceptionHandler {
     CustomResponseCode customResponseCode =
       (ex instanceof ResponseStatusException responseStatusException
       && responseStatusException.getStatusCode().value() == 404)
-      ? CustomResponseCode.NOT_FOUND_ERROR : CustomResponseCode.SYSTEM_ERROR;
+      ? CustomResponseCode.SCG_NOT_FOUND_ERROR : CustomResponseCode.SCG_SYSTEM_ERROR;
 
       response.setStatusCode(customResponseCode.getHttpStatus()); // Http Status 변경
       response.getHeaders().setContentType(MediaType.APPLICATION_JSON); // Content-Type을 Json으로 변경
