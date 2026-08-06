@@ -12,7 +12,7 @@ env:
   # ghcr.io에 올릴 이미지명 설정
   IMAGE_NAME: msa4-scg
   MANIFEST_PATH: kwondevelop/k8s-manifest 
-  MANIFEST_REPO: k8s-manifest
+  MANIFEST_REPO: kwondevelop/k8s-manifest
 
 # 해당 워크플로우가 실행 중 GITHUB_TOKEN에 부여할 권한 설정
 permissions:
