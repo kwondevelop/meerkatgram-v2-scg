@@ -62,7 +62,7 @@ jobs:
         # k8s-manifest에 push -> ArgoCD가 감지해 자동 배포
         run: |
           IMAGE=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/$IMAGE_NAME
-          cd manifests/$MANIFEST_PATH
+          cd manifest/$MANIFEST_PATH
           sed -i "s|image: ${IMAGE}:.*|image: ${IMAGE}:${GITHUB_RUN_NUMBER}|" deployment.yaml
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
